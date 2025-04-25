@@ -119,6 +119,12 @@ A full HTML Newman report is included to visualize test run results.
 ![Newman Report Screenshot](path/to/screenshot.png)
 
 ---
+## 📸 Newman Report Screenshots
+
+Here is the Newman report:
+
+![Newman1](Newman1.JPG)
+![Newman2](Newman2.JPG)
 
 ## 📝 Author
 
