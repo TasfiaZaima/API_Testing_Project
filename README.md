@@ -1,4 +1,4 @@
-# API Testing of Resr Booking with Newman Report
+# API Testing of Rest Booking with Newman Report
 
 This project demonstrates the process of automating API testing for the Restful Booker API using Postman and Newman. It involves creating, updating, retrieving, and deleting booking records through API requests. The tests are executed using Postman, and the results are generated as a detailed HTML report using Newman. This repository includes all necessary Postman collections and environment files, along with the setup instructions to run the tests and view the results.
 
