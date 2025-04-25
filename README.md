@@ -69,8 +69,8 @@ npm install -g newman-reporter-htmlextra
    {
        "firstname": "{{firstName}}",
        "lastname": "{{lastName}}",
-       "totalprice": {{totalPrice}},
-       "depositpaid": {{depositPaid}},
+       "totalprice": "{{totalPrice}}",
+       "depositpaid": "{{depositPaid}}",
        "bookingdates": {
            "checkin": "{{checkin}}",
            "checkout": "{{checkout}}"
@@ -116,8 +116,8 @@ npm install -g newman-reporter-htmlextra
    {
        "firstname": "{{firstName}}",
        "lastname": "{{lastName}}",
-       "totalprice": {{totalPrice}},
-       "depositpaid": {{depositPaid}},
+       "totalprice": "{{totalPrice}}",
+       "depositpaid": "{{depositPaid}}",
        "bookingdates": {
            "checkin": "{{checkin}}",
            "checkout": "{{checkout}}"
