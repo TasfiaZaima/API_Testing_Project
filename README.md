@@ -147,7 +147,7 @@ newman run Tasfia_Zaima_SQA.postman_collection.json -e Tasfia_Zaima_SQA.postman_
 
 - **HTML Report Generated**
 
-   The report has been generated and stored in the `newman/` directory. You can find the detailed execution results in the file named `Booking-2025-04-25-06-00-10-902-0.html`.
+   The report has been generated and stored in the `newman/` directory.
 
 ### Screenshots:
 
