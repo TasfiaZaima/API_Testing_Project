@@ -112,16 +112,7 @@ pm.environment.set("token", data.token);
 
 ## 📊 Newman Report
 
-A full HTML Newman report is included to visualize test run results.
-
-📁 **File Name:** `Booking-2025-04-25-06-00-10-902-0.html`  
-📸 **Sample Screenshot:**  
-![Newman Report Screenshot](path/to/screenshot.png)
-
----
-## 📸 Newman Report Screenshots
-
-Here is the Newman report:
+A full HTML Newman report is included to visualize test run results.Here is the Newman report:
 
 ![Newman1](Newman1.JPG)
 ![Newman2](Newman2.JPG)
@@ -129,7 +120,3 @@ Here is the Newman report:
 ## 📝 Author
 
 **Tasfia Zaima**  
-
----
-
-Let me know if you'd like me to export this as a `README.md` file or add a placeholder image for the report screenshot!
