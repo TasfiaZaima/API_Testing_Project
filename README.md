@@ -1,7 +1,3 @@
-Here's a GitHub README template for your Postman API testing project, Tasfia. It includes your setup, scripts, and the Newman report at the end with a placeholder for the screenshot or link.
-
----
-
 # 🧪 API Testing Project — Tasfia Zaima
 
 This repository contains a complete Postman test suite for a **Booking API**, developed and automated by **Tasfia Zaima**. It covers creating, retrieving, updating bookings, and validating responses using dynamic environment variables and randomized test data.
