@@ -1,8 +1,4 @@
-Here’s the updated README with the **Features** and **Setup** sections:
-
----
-
-# Automated Testing of Rest Booking API with Newman Report
+# API Testing of Resr Booking with Newman Report
 
 This project demonstrates the process of automating API testing for the Restful Booker API using Postman and Newman. It involves creating, updating, retrieving, and deleting booking records through API requests. The tests are executed using Postman, and the results are generated as a detailed HTML report using Newman. This repository includes all necessary Postman collections and environment files, along with the setup instructions to run the tests and view the results.
 
@@ -157,7 +153,8 @@ newman run Tasfia_Zaima_SQA.postman_collection.json -e Tasfia_Zaima_SQA.postman_
 
 - ![Newman Report Screenshot 1](Newman1.JPG)
 - ![Newman Report Screenshot 2](Newman2.JPG)
-
-
+- ![Newman Report Screenshot 1](Newman3.JPG)
+- ![Newman Report Screenshot 2](Newman4.JPG)
+- ![Newman Report Screenshot 2](Newman5.JPG)
 
 ---
