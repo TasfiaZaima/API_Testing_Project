@@ -1,125 +1,163 @@
-# 🧪 API Testing Project — Tasfia Zaima
-
-This repository contains a complete Postman test suite for a **Booking API**, developed and automated by **Tasfia Zaima**. It covers creating, retrieving, updating bookings, and validating responses using dynamic environment variables and randomized test data.
+Here’s the updated README with the **Features** and **Setup** sections:
 
 ---
 
-## 📦 Features
+# Automated Testing of Rest Booking API with Newman Report
 
-- 🔄 **Dynamic Test Data Generation** using Moment.js and randomization
-- ✅ **Automated Test Validations** with Postman Test scripts
-- 🔐 **Token Generation & Authorization**
-- 📥 **GET Booking Validations**
-- ✏️ **PUT Booking Updates**
-- 📄 **Newman HTML Report** for execution summary
+This project demonstrates the process of automating API testing for the Restful Booker API using Postman and Newman. It involves creating, updating, retrieving, and deleting booking records through API requests. The tests are executed using Postman, and the results are generated as a detailed HTML report using Newman. This repository includes all necessary Postman collections and environment files, along with the setup instructions to run the tests and view the results.
 
----
-## 📄 API Documentation
+## API Documentation
 
-You can view the full API documentation [here](https://docs.google.com/document/d/1By2-SYRGB0pn-R45Pk0AHDecpK1oZiTA7nf31Op_r9k/edit?usp=sharing).
+You can view the complete API documentation [here](https://docs.google.com/document/d/1By2-SYRGB0pn-R45Pk0AHDecpK1oZiTA7nf31Op_r9k/edit?usp=sharing).
 
-## 🧰 Technologies Used
+## Features:
+- **Automated API Testing**: Automated testing of the Restful Booker API for booking creation, retrieval, updating, and deletion.
+- **Postman Collection**: Pre-configured Postman collection for various API operations.
+- **Dynamic Data Generation**: Utilizes dynamic data generation for first name, last name, total price, check-in, and check-out dates in the API requests.
+- **Authentication Token Generation**: Automatic generation of authentication tokens for secure access to the API.
+- **Newman HTML Report**: Generate detailed HTML reports for test execution with rich visuals and logs.
+- **Cross-environment Testing**: The Postman environment allows testing in different environments such as Development or Production.
+- **API Documentation**: Detailed API documentation with request methods, bodies, and expected responses.
+- **Screenshots of Test Execution**: Visual evidence of test execution with screenshots to verify the testing process.
 
-- [Postman](https://www.postman.com/)
-- [Moment.js](https://momentjs.com/)
-- [Newman](https://www.npmjs.com/package/newman)
+## Technology Used:
+- **Postman**: API development and testing tool.
+- **Newman**: Command-line collection runner for Postman.
+- **Newman HTML Reporter**: HTML report generation for Newman test results.
 
----
+## Prerequisites:
+- **Node.js** (Required for running Newman)
+- **Newman** (CLI tool for running Postman collections)
+- **Newman HTML Reporter** (For generating detailed reports)
 
-## 🔧 Setup Instructions
+## Setup
 
-1. Clone this repository.
-2. Import the Postman collection and environment.
-3. Install dependencies for running Newman:
-   ```bash
-   npm install -g newman
+### 1. Install Postman:
+If you haven't already, download and install [Postman](https://www.postman.com/downloads/).
+
+### 2. Clone the Repository:
+Clone this repository to your local machine:
+```bash
+git clone https://github.com/TasfiaZaima/Automated-Testing-of-Rest-Booking-API-with-Newman-Report.git
+```
+
+### 3. Import the Postman Collection:
+1. Open Postman.
+2. Click on the **Import** button.
+3. Select the Postman collection file from the cloned repository to import it into Postman.
+
+### 4. Import the Postman Environment:
+1. In Postman, click on the gear icon in the top-right corner.
+2. Select **Import** and choose the Postman environment file from the cloned repository to import it.
+
+### 5. Install Newman and Required Packages:
+
+#### Install **Newman** globally:
+```bash
+npm install -g newman
+```
+
+#### Install **Newman HTML Reporter** globally:
+```bash
+npm install -g newman-reporter-htmlextra
+```
+## Testing
+
+### Test Case Scenarios:
+
+1. **Create New Booking**
+   - **Request URL:** `https://restful-booker.herokuapp.com/booking/`
+   - **Request Method:** POST
+   - **Request Body:**
+   ```json
+   {
+       "firstname": "{{firstName}}",
+       "lastname": "{{lastName}}",
+       "totalprice": {{totalPrice}},
+       "depositpaid": {{depositPaid}},
+       "bookingdates": {
+           "checkin": "{{checkin}}",
+           "checkout": "{{checkout}}"
+       },
+       "additionalneeds": "{{additionalNeeds}}"
+   }
    ```
-4. Run the collection with:
-   ```bash
-   newman run <collection.json> -e <environment.json> -r html --reporter-html-export Booking-2025-04-25-06-00-10-902-0.html
+
+2. **Get Booking Details By ID**
+   - **Request URL:** `https://restful-booker.herokuapp.com/booking/bookingid`
+   - **Request Method:** GET
+   - **Response Body:**
+   ```json
+   {
+       "firstname": "D'angelo",
+       "lastname": "Feeney",
+       "totalprice": 757,
+       "depositpaid": true,
+       "bookingdates": {
+           "checkin": "2024-03-15",
+           "checkout": "2024-03-20"
+       },
+       "additionalneeds": "hard drive"
+   }
    ```
 
----
+3. **Create A Token For Authentication**
+   - **Request URL:** `https://restful-booker.herokuapp.com/auth`
+   - **Request Method:** POST
+   - **Request Body:**
+   ```json
+   {
+       "username": "admin",
+       "password": "password123"
+   }
+   ```
 
-## 📤 POST Request: Create Booking
+4. **Update the Booking Details**
+   - **Request URL:** `https://restful-booker.herokuapp.com/booking/bookingid`
+   - **Request Method:** PUT
+   - **Request Body:**
+   ```json
+   {
+       "firstname": "{{firstName}}",
+       "lastname": "{{lastName}}",
+       "totalprice": {{totalPrice}},
+       "depositpaid": {{depositPaid}},
+       "bookingdates": {
+           "checkin": "{{checkin}}",
+           "checkout": "{{checkout}}"
+       },
+       "additionalneeds": "{{additionalNeeds}}"
+   }
+   ```
 
-**Body:**
-```json
-{ 
- "firstname": "{{firstName}}", 
- "lastname": "{{lastName}}", 
- "totalprice": {{totalprice}}, 
- "depositpaid": {{depositpaid}}, 
- "bookingdates": { 
-   "checkin": "{{checkin}}", 
-   "checkout": "{{checkout}}" 
- }, 
- "additionalneeds": "{{additionalneeds}}" 
-}
+5. **Delete Booking Record**
+   - **Request URL:** `https://restful-booker.herokuapp.com/booking/bookingid`
+   - **Request Method:** DELETE
+   - **Response Body:** None
+
+### 6. Run Command:
+
+#### Run Command for Console:
+```bash
+newman run Tasfia_Zaima_SQA.postman_collection.json -e Tasfia_Zaima_SQA.postman_environment.json
 ```
 
-**Pre-request Script Highlights:**
-- Random name generation
-- Date manipulation using `moment`
-- Random `totalprice`, `depositpaid`, and `additionalneeds`
-
----
-
-## 📥 GET Request: Retrieve Booking
-
-**Validation Tests:**
-- Status code
-- First name, last name
-- Check-in/check-out dates
-- Total price, deposit paid
-- Additional needs
-
----
-
-## 🔐 POST Request: Token Generation
-
-**Body:**
-```json
-{
-  "username": "admin",
-  "password": "password123"
-}
+#### Run Command for Report:
+```bash
+newman run Tasfia_Zaima_SQA.postman_collection.json -e Tasfia_Zaima_SQA.postman_environment.json -r cli,htmlextra
 ```
 
-**Script:**
-```javascript
-var data = pm.response.json();
-pm.environment.set("token", data.token);
-```
+## Newman Report Summary
+
+- **HTML Report Generated**
+
+   The report has been generated and stored in the `newman/` directory. You can find the detailed execution results in the file named `Booking-2025-04-25-06-00-10-902-0.html`.
+
+### Screenshots:
+
+- ![Newman Report Screenshot 1](Newman1.JPG)
+- ![Newman Report Screenshot 2](Newman2.JPG)
+
+
 
 ---
-
-## ✏️ PUT Request: Update Booking
-
-**Body:**
-```json
-{
- "firstname": "{{firstName}}",
- "lastname": "{{lastName}}",
- "totalprice": 7000,
- "depositpaid": true,
- "bookingdates": {
-   "checkin": "{{checkin}}",
-   "checkout": "{{checkout}}"
- },
- "additionalneeds": "Snacks"
-}
-```
-
----
-
-## 📊 Newman Report
-
-A full HTML Newman report is included to visualize test run results.Here is the Newman report:
-
-![Newman1](Newman1.JPG)
-![Newman2](Newman2.JPG)
-
-## 📝 Author
-
-**Tasfia Zaima**  
