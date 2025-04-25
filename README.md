@@ -14,6 +14,9 @@ This repository contains a complete Postman test suite for a **Booking API**, de
 - 📄 **Newman HTML Report** for execution summary
 
 ---
+## 📄 API Documentation
+
+You can view the full API documentation [here](https://docs.google.com/document/d/1By2-SYRGB0pn-R45Pk0AHDecpK1oZiTA7nf31Op_r9k/edit?usp=sharing).
 
 ## 🧰 Technologies Used
 
